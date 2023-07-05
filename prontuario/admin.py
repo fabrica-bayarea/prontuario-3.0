@@ -5,12 +5,13 @@ from prontuario import models
 
 @admin.register(models.ProntuarioMedico)
 class ProntuarioMedico(admin.ModelAdmin):
-    ...
+    list_display = 'id', 'pessoa_id',
 
 
 @admin.register(models.Medico)
 class Medico(admin.ModelAdmin):
-    ...
+    list_display = 'id', 'name',
+    ordering = '-id',
 
 
 @admin.register(models.Pessoa)
